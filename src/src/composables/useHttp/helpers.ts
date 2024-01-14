@@ -19,12 +19,10 @@ export function unrefDeserializedObject(body: unknown): unknown {
 
     for (const [key, value] of Object.entries(bodyObject)) {
       if (isObject(value) || isRef(value)) {
-        // @ts-expect-error element implicitly has an 'any' type
         bodyObject[key] = unrefDeserializedObject(getValueFromDeserializedRef(value));
       }
 
       if (Array.isArray(value)) {
-        // @ts-expect-error element implicitly has an 'any' type
         bodyObject[key] = value.map(valueValue => {
           return unrefDeserializedObject(valueValue);
         });

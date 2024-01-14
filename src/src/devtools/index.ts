@@ -6,7 +6,7 @@ import { getTags } from './helpers';
 import type { App } from '@vue/devtools-api'
 
 const devtoolsApi = ref();
-const inspectorId = 'devtools';
+const inspectorId = 'api-debugbar';
 
 export function afterFetch () {
   devtoolsApi.value.sendInspectorTree(inspectorId);
@@ -17,9 +17,9 @@ export function registerDevtools(app: App) {
   const { requests, options } = useDevtools();
 
   setupDevtoolsPlugin({
-    id: 'dev.esm.devtools',
-    label: 'Devtools',
-    packageName: 'devtools',
+    id: inspectorId,
+    label: 'API debugbar',
+    packageName: inspectorId,
     enableEarlyProxy: true,
     settings: {
       preserveLog: {
@@ -37,9 +37,12 @@ export function registerDevtools(app: App) {
       id: inspectorId,
       label: 'API debugbar',
       icon: 'assessment',
+      treeFilterPlaceholder: 'Search requests',
+      stateFilterPlaceholder: 'Search meta',
     });
 
     api.on.setPluginSettings(settings => {
+      // @ts-ignore
       options.value = settings;
     });
 
@@ -51,9 +54,10 @@ export function registerDevtools(app: App) {
             label: 'Requests',
 
             children: requests.value.sort((a, b) => {
+              // @ts-ignore
               return new Date(a.context.__meta.datetime) - new Date(b.context.__meta.datetime);
             }).reverse().map(request => {
-              const urlPath = request.context.__meta.uri.split('/').pop();
+              const urlPath = request.context.__meta.uri.split('/').pop()?.split('?')[0]
               const date = new Date(request.context.__meta.datetime);
               return {
                 id: request.context.__meta.id,
@@ -84,4 +88,4 @@ export function registerDevtools(app: App) {
       }
     });
   });
-};
+}

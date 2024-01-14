@@ -456,15 +456,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.21.0":
-  version: 7.21.5
-  resolution: "@babel/runtime@npm:7.21.5"
-  dependencies:
-    regenerator-runtime: "npm:^0.13.11"
-  checksum: 7cd4f9be85c655432688e1b328a62dc5666e2386b379948153da6ab51eff1a1a583e8606024cf9231ee59fc595d6cd1d2ecc6c280739c45f7a5994e8ccf8c281
-  languageName: node
-  linkType: hard
-
 "@babel/template@npm:^7.22.5":
   version: 7.22.5
   resolution: "@babel/template@npm:7.22.5"
@@ -898,24 +889,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/vue@npm:^1.7.16":
-  version: 1.7.16
-  resolution: "@headlessui/vue@npm:1.7.16"
-  peerDependencies:
-    vue: ^3.2.0
-  checksum: b078a5b5eee126df7566552ba3bb64e92c8a8decf11f383d6b8ee63d8ff56af71c0a26ea427e92c1392a1e9077c36190b48c5c0708fc6cf2e14d52b7bcf3ad8d
-  languageName: node
-  linkType: hard
-
-"@heroicons/vue@npm:^2.0.18":
-  version: 2.0.18
-  resolution: "@heroicons/vue@npm:2.0.18"
-  peerDependencies:
-    vue: ">= 3"
-  checksum: 9e5157175531739130c8274d69c159ae49e4e1f65f4e1265799b2b2e7d65510674437cbf82a372e8cb82d7cabb9b43aa90d334b4edaa21cc31eaaf13677ad945
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -999,18 +972,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "@mdx-js/react@npm:2.3.0"
-  dependencies:
-    "@types/mdx": "npm:^2.0.0"
-    "@types/react": "npm:>=16"
-  peerDependencies:
-    react: ">=16"
-  checksum: bce1cb1dde0a9a2b786cd9167b9e2bc0e3be52c195a4a79aaf1677470566d1fd2979d01baca2380c76aa4a1a27cd89f051484e595fdc4144a428d6af39bb667a
-  languageName: node
-  linkType: hard
-
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1079,32 +1040,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.9.0":
-  version: 2.11.8
-  resolution: "@popperjs/core@npm:2.11.8"
-  checksum: ddd16090cde777aaf102940f05d0274602079a95ad9805bd20bc55dcc7c3a2ba1b99dd5c73e5cc2753c3d31250ca52a67d58059459d7d27debb983a9f552936c
-  languageName: node
-  linkType: hard
-
-"@programic/debugbar@workspace:.":
+"@programic/api-debugbar-vue-devtools@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@programic/debugbar@workspace:."
+  resolution: "@programic/api-debugbar-vue-devtools@workspace:."
   dependencies:
     "@babel/core": "npm:^7.22.9"
     "@babel/preset-typescript": "npm:^7.22.5"
-    "@headlessui/vue": "npm:^1.7.16"
-    "@heroicons/vue": "npm:^2.0.18"
-    "@mdx-js/react": "npm:^2.3.0"
     "@programic/eslint-plugin": "npm:^8.0.0"
     "@rushstack/eslint-patch": "npm:^1.3.2"
     "@types/eslint": "npm:^8.44.1"
-    "@types/google.maps": "npm:^3.53.5"
     "@types/jsdom": "npm:^21.1.1"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^20.4.6"
     "@types/react": "npm:^18.2.18"
     "@types/react-dom": "npm:^18.2.7"
-    "@types/uuid": "npm:^9"
     "@typescript-eslint/eslint-plugin": "npm:^5.61.0"
     "@typescript-eslint/parser": "npm:^5.61.0"
     "@vitejs/plugin-vue": "npm:^4.2.3"
@@ -1113,7 +1062,6 @@ __metadata:
     "@vueuse/core": "npm:^10.4.1"
     autoprefixer: "npm:^10.4.14"
     babel-loader: "npm:^9.1.3"
-    date-fns: "npm:^2.30.0"
     eslint: "npm:^8.46.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-import-resolver-typescript: "npm:^3.5.5"
@@ -1124,11 +1072,9 @@ __metadata:
     eslint-plugin-vue: "npm:^9.16.1"
     jsdom: "npm:^22.1.0"
     lodash: "npm:^4.17.21"
-    mini-svg-data-uri: "npm:^1.4.4"
     postcss: "npm:^8.4.27"
     tailwindcss: "npm:^3.3.3"
     typescript: "npm:^5.1.6"
-    uuid: "npm:^9.0.0"
     vite: "npm:^4.4.8"
     vite-plugin-externals: "npm:^0.6.2"
     vite-plugin-singlefile: "npm:^0.13.5"
@@ -1139,10 +1085,7 @@ __metadata:
     vue-loader: "npm:^17.2.2"
     vue-router: "npm:4"
     vue-template-compiler: "npm:^2.7.14"
-    vue-tippy: "npm:v6"
     vue-tsc: "npm:^1.8.8"
-  peerDependencies:
-    "@sentry/vue": ^7.86.0
   languageName: unknown
   linkType: soft
 
@@ -1213,13 +1156,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/google.maps@npm:^3.53.5":
-  version: 3.53.5
-  resolution: "@types/google.maps@npm:3.53.5"
-  checksum: 0ea96532f918200af0864187814b3f5da792b866db582681f798554877fdb2cb867296be6504e1374e91028d6d0c790bd0f000a5f9d80a5bdd1072631493c3f0
-  languageName: node
-  linkType: hard
-
 "@types/jsdom@npm:^21.1.1":
   version: 21.1.1
   resolution: "@types/jsdom@npm:21.1.1"
@@ -1256,13 +1192,6 @@ __metadata:
   version: 4.14.202
   resolution: "@types/lodash@npm:4.14.202"
   checksum: 1bb9760a5b1dda120132c4b987330d67979c95dbc22612678682cd61b00302e190f4207228f3728580059cdab5582362262e3819aea59960c1017bd2b9fb26f6
-  languageName: node
-  linkType: hard
-
-"@types/mdx@npm:^2.0.0":
-  version: 2.0.5
-  resolution: "@types/mdx@npm:2.0.5"
-  checksum: 1069baff0b2d0fb0bc724748e2386af626cc30f8ef99e680afb4dee566ed0aeabd31cea774212a7033f491e594a0acc234116078b252cba94ac413f91eb585a3
   languageName: node
   linkType: hard
 
@@ -1303,7 +1232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16":
+"@types/react@npm:*":
   version: 18.2.5
   resolution: "@types/react@npm:18.2.5"
   dependencies:
@@ -1350,13 +1279,6 @@ __metadata:
   version: 4.0.2
   resolution: "@types/tough-cookie@npm:4.0.2"
   checksum: 8682b4062959c15c0521361825839e10d374344fa84166ee0b731b815ac7b79a942f6e9192fad6383d69df2251021678c86c46748ff69c61609934a3e27472f2
-  languageName: node
-  linkType: hard
-
-"@types/uuid@npm:^9":
-  version: 9.0.1
-  resolution: "@types/uuid@npm:9.0.1"
-  checksum: c472b8a77cbeded4bc529220b8611afa39bd64677f507838f8083d8aac8033b1f88cb9ddaa2f8589e0dcd2317291d0f6e1379f82d5ceebd6f74f3b4825288e00
   languageName: node
   linkType: hard
 
@@ -2741,15 +2663,6 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
     whatwg-url: "npm:^12.0.0"
   checksum: 006e869b5bf079647949a3e9b1dd69d84b2d5d26e6b01c265485699bc96e83817d4b5aae758b2910a4c58c0601913f3a0034121c1ca2da268e9a244c57515b15
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^2.30.0":
-  version: 2.30.0
-  resolution: "date-fns@npm:2.30.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.21.0"
-  checksum: 70b3e8ea7aaaaeaa2cd80bd889622a4bcb5d8028b4de9162cbcda359db06e16ff6e9309e54eead5341e71031818497f19aaf9839c87d1aba1e27bb4796e758a9
   languageName: node
   linkType: hard
 
@@ -5133,15 +5046,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-svg-data-uri@npm:^1.4.4":
-  version: 1.4.4
-  resolution: "mini-svg-data-uri@npm:1.4.4"
-  bin:
-    mini-svg-data-uri: cli.js
-  checksum: 1336c2b00b6a72b0ce3cf942f7ab074faf463b941042fbe51d7a70be119c5d4223880aaa29584d5a804496ca1dda9b6fff7dd5aa284721907519b646192d8aaa
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:9.0.1":
   version: 9.0.1
   resolution: "minimatch@npm:9.0.1"
@@ -6227,13 +6131,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.11":
-  version: 0.13.11
-  resolution: "regenerator-runtime@npm:0.13.11"
-  checksum: d493e9e118abef5b099c78170834f18540c4933cedf9bfabc32d3af94abfb59a7907bd7950259cbab0a929ebca7db77301e8024e5121e6482a82f78283dfd20c
-  languageName: node
-  linkType: hard
-
 "regexp-tree@npm:^0.1.27":
   version: 0.1.27
   resolution: "regexp-tree@npm:0.1.27"
@@ -6933,15 +6830,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tippy.js@npm:^6.3.7":
-  version: 6.3.7
-  resolution: "tippy.js@npm:6.3.7"
-  dependencies:
-    "@popperjs/core": "npm:^2.9.0"
-  checksum: 9bd1c6ab68704dd10b8896fd66e28f3b4b4017a32b8802a9d57a565dee1704df45c249d8363bcaca235dbc0d9a7a90d6f1326f1e6b999f7809b36599a3f92eb3
-  languageName: node
-  linkType: hard
-
 "titleize@npm:^3.0.0":
   version: 3.0.0
   resolution: "titleize@npm:3.0.0"
@@ -7268,15 +7156,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "uuid@npm:9.0.0"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 23857699a616d1b48224bc2b8440eae6e57d25463c3a0200e514ba8279dfa3bde7e92ea056122237839cfa32045e57d8f8f4a30e581d720fd72935572853ae2e
-  languageName: node
-  linkType: hard
-
 "validate-npm-package-license@npm:^3.0.1":
   version: 3.0.4
   resolution: "validate-npm-package-license@npm:3.0.4"
@@ -7577,17 +7456,6 @@ __metadata:
     de-indent: "npm:^1.0.2"
     he: "npm:^1.2.0"
   checksum: b55cbc2d5dd07d6cbf2ac87cce93fb76f3db4dcea6f7910dab98fd5e2068d97f4bcb3ee7ceedbabd9fd96ce3547116fa3ca6ff1cc6e3df17d18e6b356009067e
-  languageName: node
-  linkType: hard
-
-"vue-tippy@npm:v6":
-  version: 6.2.0
-  resolution: "vue-tippy@npm:6.2.0"
-  dependencies:
-    tippy.js: "npm:^6.3.7"
-  peerDependencies:
-    vue: ^3.2.0
-  checksum: 2e11d9db3b7a5912cd2b22311976cfcbb2159c79270d834c7d0387a9ae0905571217e7e9cf092fe46ac47da720b3fe196034723be30525051c63c7f57cde6623
   languageName: node
   linkType: hard
 
