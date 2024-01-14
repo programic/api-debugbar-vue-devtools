@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+
+  nginx:
+    image: ${PROJECT_NAME}-nginx:${PROJECT_ENVIRONMENT}
+    build:
+      context: .
+      dockerfile: ./dockerfiles/nginx.dockerfile
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

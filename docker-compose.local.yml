@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+
+  workspace:
+    image: vue-debugbar-workspace
+    build:
+      context: .
+      dockerfile: ./dockerfiles/workspace.dockerfile
+    restart: unless-stopped
+    ports:
+      - 80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-http.rule=Host(`${TRAEFIK_HOST}`)"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-http.entrypoints=web"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.rule=Host(`${TRAEFIK_HOST}`)"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.entrypoints=websecure"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.middlewares=secure-headers@file"
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.tls=true"
+
+    volumes:
+      - ./src:/var/www:cached
+    networks:
+      - web
+    command: ['tail', '-f', '/dev/null']
+
+  # Ignore nginx container on local
+  nginx:
+    profiles:
+      - do-not-start

@@ -1,0 +1,20 @@
+@config "./../../tailwind.config.cjs";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #E25C2A;
+    --color-primary-active: #C2410C;
+    --color-secondary: #1E243B;
+    --color-secondary-active: #1E243B;
+  }
+
+  body {
+    @apply text-zinc-700 overflow-x-hidden;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+}

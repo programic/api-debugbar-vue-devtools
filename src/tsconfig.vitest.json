@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "lib": [],
+    "types": ["node", "jsdom", "vite/client"],
+    "outDir": "dist"
+  },
+  "files": ["./src/typings/shims-vue.d.ts"],
+  "include": [
+    "src/modules/**/*.ts",
+    "src/modules/**/*.d.ts",
+    "src/modules/**/*.vue",
+    "src/stories"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "compilerOptions": {
+    "outDir": "dist/src",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "~": ["./src"],
+      "~/*": ["./src/*"],
+      "~composables": ["./src/modules/composables"],
+      "~composables/*": ["./src/modules/composables/*"]
+    },
+    "lib": ["esnext", "dom"],
+    "types": [
+      "node",
+      "vitest",
+      "vite/client"
+    ],
+  },
+  "files": ["./src/typings/shims-vue.d.ts"],
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "../../node_modules",
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/__mocks__/**"
+  ]
+}
